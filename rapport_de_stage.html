@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portrait Page with Header</title>
+  <style>
+    :root{
+      --bg:#0b0710;
+      --panel:#0f0b14;
+      --accent:#8b5cf6; /* purple */
+      --accent-2:#6d28d9;
+      --muted:#9aa0a6;
+      --card:#121018;
+      --glass: rgba(255,255,255,0.03);
+    }
+    body {
+      margin: 0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      color: white;
+      background: var(--panel);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .portrait {
+      width: 250px;          /* adjust as needed */
+      height: auto;          /* keeps aspect ratio */
+      border-radius: 12px;   /* subtle rounded corners, not circular */
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    .theme-button {
+      background-color: var(--panel);
+      color: #ffffff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="./rapport cover.jpg" alt="Portrait" class="portrait">
+    <button class="theme-button"><a href="./rapport de stage.pdf" download style="text-decoration: none; color: #fff;"> Download </a></button>
+  </div>
+
+</body>
+</html>
