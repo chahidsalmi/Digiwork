@@ -10,16 +10,15 @@
     :root{
       --bg:#0b0710;
       --panel:#0f0b14;
-      --accent:#8b5cf6; /* purple */
+      --accent:#8b5cf6;
       --accent-2:#6d28d9;
       --muted:#9aa0a6;
       --card:#121018;
       --glass: rgba(255,255,255,0.03);
     }
     *{box-sizing:border-box}
-    html,body{height:100% ; scroll-behavior: smooth;}
+    html,body{height:100%; scroll-behavior:smooth;}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6e6ee;background:linear-gradient(180deg,var(--bg),#07040a 60%);-webkit-font-smoothing:antialiased}
-
     .container{max-width:1100px;margin:0 auto;padding:28px}
 
     /* Header */
@@ -31,49 +30,14 @@
     nav a.cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:white}
 
     /* Responsive Menu */
-    .menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1003;
-    }
-
-    .nav-wrapper {
-      transition: right 0.3s ease;
-    }
-
+    .menu-btn{display:none;background:none;border:none;color:white;font-size:28px;cursor:pointer;z-index:1003;}
+    .nav-wrapper{transition:right 0.3s ease;}
     @media (max-width:820px){
-      .menu-btn {
-        display:block;
-      }
-      .nav-wrapper {
-        position:fixed;
-        top:0;
-        right:-100%;
-        width:65%;
-        height:100vh;
-        background:rgba(15,11,20,0.95);
-        backdrop-filter:blur(8px);
-        transition:right 0.3s ease;
-        padding-top:100px;
-        box-shadow:-4px 0 20px rgba(0,0,0,0.4);
-        z-index:1001;
-      }
-      .nav-wrapper.open {
-        right:0;
-      }
-      nav {
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-      }
-      nav a {
-        margin:16px 0;
-        font-size:18px;
-      }
+      .menu-btn{display:block;}
+      .nav-wrapper{position:fixed;top:0;right:-100%;width:65%;height:100vh;background:rgba(15,11,20,0.95);backdrop-filter:blur(8px);transition:right 0.3s ease;padding-top:100px;box-shadow:-4px 0 20px rgba(0,0,0,0.4);z-index:1001;}
+      .nav-wrapper.open{right:0;}
+      nav{display:flex;flex-direction:column;align-items:center;}
+      nav a{margin:16px 0;font-size:18px;}
     }
 
     /* Hero */
@@ -84,7 +48,6 @@
     .btn{padding:10px 16px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
     .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
     .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-
     .hero-right{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:10px;border-radius:16px;border:1px solid rgba(255,255,255,0.04)}
     .hero-img{width:100%;height:360px;background:url(./hero.png) center/cover no-repeat;border-radius:12px}
 
@@ -149,7 +112,7 @@
       <div class="nav-wrapper">
         <nav>
           <a href="#services">Services</a>
-          <a href="#works">Réalisations</a>
+          <a href="#works-section">Réalisations</a>
           <a href="#pricing">Tarifs</a>
           <a class="cta" href="#contact">Me contacter</a>
         </nav>
@@ -164,7 +127,7 @@
 
           <div class="buttons">
             <button class="btn btn-primary" onclick="location.href='#contact'">Commander maintenant</button>
-            <button class="btn btn-ghost" onclick="location.href='#works'">Voir mes travaux</button>
+            <button class="btn btn-ghost" onclick="location.href='#works-section'">Voir mes travaux</button>
           </div>
 
           <div class="stats">
@@ -207,18 +170,25 @@
             <p>Rapport + présentation + CV — remise spéciale pour étudiants.</p>
             <div class="badge">Pack personnalisé</div>
           </div>
+
+          <div class="card">
+            <h3>UI & UX Design</h3>
+            <p>Je crée des interfaces attrayantes et optimise l’expérience utilisateur</p>
+            <div class="badge">À partir de 450 DH</div>
+          </div>
         </div>
       </section>
 
-      <section id="works">
+      <section id="works-section">
         <h2 style="margin-top:26px">Réalisations récentes</h2>
         <p style="color:var(--muted);margin-top:6px">Cliquez pour voir les projets en grand (images de démonstration).</p>
 
-        <div class="works" id="works">
-          <div class="work-item"> <a href="./rapport_de_stage.pdf" style="text-decoration: none; color: var(--muted);" target="_blank">Rapport — Projet marketing</a></div>
-          <div class="work-item"> <a href="./presentation_de_soutenance.pdf" style="text-decoration: none; color: var(--muted);" target="_blank"> Présentation — Soutenance mémoire </a></div>
-          <div class="work-item"><a href="./CV_classic.pdf" style="text-decoration: none; color: var(--muted);" target="_blank">CV moderne — Développeur</a></div>
-          <div class="work-item"><a href="./CV_ats.pdf" style="text-decoration: none; color: var(--muted);" target="_blank">CV ATS — Recrutemen</a> t</div>
+        <div class="works">
+          <div class="work-item"><a href="./rapport_de_stage.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">Rapport — Projet marketing</a></div>
+          <div class="work-item"><a href="./presentation_de_soutenance.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">Présentation — Soutenance mémoire</a></div>
+          <div class="work-item"><a href="./CV_classic.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">CV moderne — Développeur</a></div>
+          <div class="work-item"><a href="./CV_ats.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">CV ATS — Recrutement</a></div>
+          <div class="work-item"><a href="./UI_UX_design.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">UI & UX Design</a></div>
         </div>
       </section>
 
@@ -241,6 +211,11 @@
             <div class="amount">50 DH</div>
             <div style="color:var(--muted);margin-top:6px">CV visuel + CV ATS — 1 modification</div>
           </div>
+
+          <div class="price card">
+            <div class="amount">450 DH</div>
+            <div style="color:var(--muted);margin-top:6px">Website & Application Design</div>
+          </div>
         </div>
 
         <p style="color:var(--muted);font-size:13px;margin-top:10px">Remise pour étudiants. Contactez pour devis détaillé.</p>
@@ -249,7 +224,7 @@
       <section id="contact">
         <h2 style="margin-top:26px">Contactez-moi</h2>
         <div class="contact">
-          <form  action="https://formspree.io/f/xblpgqep" method="POST" class="card">
+          <form action="https://formspree.io/f/xblpgqep" method="POST" class="card">
             <input type="text" placeholder="Votre nom" name="Full Name" required />
             <input type="email" placeholder="Votre email" name="Email" required />
             <input type="text" placeholder="Service souhaité (ex: Rapport)" name="Service" />
@@ -258,7 +233,7 @@
           </form>
 
           <aside class="card" style="display:flex;flex-direction:column;gap:10px;justify-content:center">
-            <div style="color:var(--muted)">Téléphone : +212 704 267509</div>
+            <div style="color:var(--muted)">Téléphone : +212 70 426 7509</div>
             <div style="color:var(--muted)">Email : salmichahid15@gmail.com</div>
             <div style="color:var(--muted)">Délai moyen : 24–72 heures selon le projet</div>
           </aside>
@@ -274,7 +249,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
     const menuBtn = document.querySelector('.menu-btn');
     const navWrapper = document.querySelector('.nav-wrapper');
 
@@ -285,5 +259,3 @@
   </script>
 </body>
 </html>
-
-
