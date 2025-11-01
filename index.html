@@ -76,7 +76,18 @@
 
     /* Contact */
     .contact{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
-    form input, form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;margin-bottom:10px}
+    form input, form textarea, form select{
+      width:100%;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      background:transparent;
+      color:#fff;
+      margin-bottom:10px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      font-size:14px;
+    }
+    form select option{color:var(--muted); background-color: var(--card); padding-top: 5px; border-radius: 10px;}
     form button{width:100%;padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:white;font-weight:700}
 
     footer{margin-top:32px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
@@ -174,6 +185,12 @@
           <div class="card">
             <h3>UI & UX Design</h3>
             <p>Je crée des interfaces attrayantes et optimise l’expérience utilisateur</p>
+            <div class="badge">À partir de 799 DH</div>
+          </div>
+
+          <div class="card">
+            <h3>Portfolio Design</h3>
+            <p>Je crée des portfolios attrayants et optimise l’expérience utilisateur</p>
             <div class="badge">À partir de 999 DH</div>
           </div>
         </div>
@@ -189,6 +206,7 @@
           <div class="work-item"><a href="./CV_classic.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">CV moderne — Développeur</a></div>
           <div class="work-item"><a href="./CV_ats.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">CV ATS — Recrutement</a></div>
           <div class="work-item"><a href="./UI_UX_design.pdf" style="text-decoration:none;color:var(--muted);" target="_blank">UI & UX Design</a></div>
+          <div class="work-item"><a href="https://portfolio-smoky-phi-84.vercel.app/" style="text-decoration:none;color:var(--muted);" target="_blank">Création de site web & portfolio</a></div>
         </div>
       </section>
 
@@ -213,8 +231,13 @@
           </div>
 
           <div class="price card">
+            <div class="amount">799 DH</div>
+            <div style="color:var(--muted);margin-top:6px">Website & Application Design</div>
+          </div>
+
+          <div class="price card">
             <div class="amount">999 DH</div>
-            <div style="color:var(--muted);margin-top:6px">Basic Website & Application Design</div>
+            <div style="color:var(--muted);margin-top:6px">Création de Website & Portfolio</div>
           </div>
         </div>
 
@@ -227,7 +250,17 @@
           <form action="https://formspree.io/f/xblpgqep" method="POST" class="card">
             <input type="text" placeholder="Votre nom" name="Full Name" required />
             <input type="email" placeholder="Votre email" name="Email" required />
-            <input type="text" placeholder="Service souhaité (ex: Rapport)" name="Service" />
+
+            <select name="Service" required>
+              <option value="" disabled selected>Choisissez un service</option>
+              <option value="Rapport — Projet marketing">Rapport — Projet marketing</option>
+              <option value="Présentation — Soutenance mémoire">Présentation — Soutenance mémoire</option>
+              <option value="CV moderne — Développeur">CV moderne — Développeur</option>
+              <option value="CV ATS — Recrutement">CV ATS — Recrutement</option>
+              <option value="UI & UX Design">UI & UX Design</option>
+              <option value="Création de site web & portfolio">Création de site web & portfolio</option>
+            </select>
+
             <textarea rows="5" placeholder="Message / brief rapide" name="Message"></textarea>
             <button type="submit">Envoyer la demande</button>
           </form>
@@ -241,7 +274,7 @@
       </section>
 
       <footer>
-        © <span id="year"></span> DigiWork Design — Services digitaux • Tous droits réservés
+        © <span id="year"></span> Chahid Salmi — Services digitaux • Tous droits réservés
       </footer>
     </main>
   </div>
@@ -259,6 +292,3 @@
   </script>
 </body>
 </html>
-
-
-
